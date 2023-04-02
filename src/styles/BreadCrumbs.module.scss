@@ -1,0 +1,27 @@
+@import "index";
+
+.breadCrumbs {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  line-height: 120%;
+  color: #3F4E65;
+
+  a {
+    color: #3F4E65;
+  }
+}
+
+.breadCrumbItem:first-child {
+  padding-left: 0;
+}
+
+
+//============================MEDIA============================
+
+// Max-width 480px
+@media (max-width: $md4+px) {
+  .breadCrumbs {
+    display: none;
+  }
+}

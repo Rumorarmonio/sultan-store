@@ -1,0 +1,87 @@
+@import 'index';
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #111111;
+  margin-bottom: 15px;
+}
+
+.searchInput {
+  margin-bottom: 15px;
+}
+
+.itemsList {
+  margin-bottom: 15px;
+  line-height: 150%;
+
+  li {
+    color: #3F4E65;
+
+    .manufacturer {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .manufacturerCropped {
+      @extend .manufacturer;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tooltip {
+      width: max-content;
+      display: none;
+      position: absolute;
+      top: -35px;
+      left: 0;
+      padding: 5px;
+      border: 1px solid #d0d0d0;
+      border-radius: 5px;
+      z-index: 5;
+      background-color: #ffffff;
+      transition: all ease 0.3s;
+    }
+
+    .manufacturerCropped:hover {
+      .tooltip {
+        display: block;
+      }
+    }
+
+    .itemsCount {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 10px;
+    }
+  }
+}
+
+.isOpen {
+  cursor: pointer;
+}
+
+.isOpenTitle {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3F4E65;
+}
+
+.isOpenTriangle {
+  display: inline-block;
+  position: absolute;
+  padding-left: 5px;
+}
+
+.isOpenTriangleUp {
+  @extend .triangleUp;
+  top: 6px;
+}
+
+.isOpenTriangleDown {
+  @extend .triangleDown;
+  top: 6px;
+}

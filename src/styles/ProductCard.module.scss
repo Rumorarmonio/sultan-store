@@ -1,0 +1,76 @@
+@import "index";
+
+.cardContainer {
+  width: 326px;
+  height: 490px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 23px;
+  background: #FFFFFF;
+  box-shadow: 0 14px 39px -11px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-bottom: 21px;
+
+  &:hover {
+    background: #F6F6F6;
+  }
+}
+
+.cardContainer:nth-child(3n-1) {
+  margin: 0 21px 21px 21px;
+}
+
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  img {
+    max-height: 194px;
+    border-radius: 5px;
+  }
+}
+
+.weight {
+  margin: 4px 0 10px 0;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #111111;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+
+//============================MEDIA============================
+
+// Max-width 1366px
+@media (max-width: $md1+px) {
+  .cardContainer:nth-child(3n-1) {
+    margin: 0 0 21px 0;
+  }
+
+  .cardContainer:nth-child(2n-1) {
+    margin: 0 21px 21px 21px;
+  }
+}
+
+// Max-width 768px
+@media (max-width: $md3+px) {
+  .cardContainer:nth-child(2n-1) {
+    margin: 0 0 21px 0;
+  }
+}
+
+// Max-width 480px
+@media (max-width: $md4+px) {
+  .cardContainer:nth-child(3n-1) {
+    margin: 0 0 21px 0;
+  }
+}

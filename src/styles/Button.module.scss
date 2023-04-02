@@ -1,0 +1,54 @@
+.buttonBigText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 59px;
+  padding: 0 40px;
+  background: #FFC85E;
+  border-radius: 79px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #FFFFFF;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 200, 94, 0.8);
+  }
+}
+
+.buttonBig {
+  @extend .buttonBigText;
+  span {
+    margin-right: 12px;
+  }
+}
+
+.buttonMediumText {
+  @extend .buttonBigText;
+  height: 45px;
+  padding: 0 25px;
+}
+.buttonSmallText {
+  @extend .buttonBigText;
+  height: 39px;
+  padding: 0 18px;
+}
+
+.buttonMedium {
+  @extend .buttonMediumText;
+  span {
+    margin-right: 12px;
+  }
+}
+.buttonSmall {
+  @extend .buttonSmallText;
+  span {
+    margin-right: 12px;
+  }
+}
+
+.iconOnly {
+  @extend .buttonBig;
+  padding: 0;
+  width: 59px;
+}

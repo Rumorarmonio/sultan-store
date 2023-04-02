@@ -1,0 +1,54 @@
+@import 'index';
+
+.addToCartFull {
+  width: 490px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addToCart {
+  @extend .addToCartFull;
+  width: auto;
+}
+
+.priceFull {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 130%;
+  color: #111111;
+}
+
+.price {
+  @extend .priceFull;
+  font-size: 16px;
+}
+
+.counter {
+  @extend .productsCounter;
+}
+
+
+//============================MEDIA============================
+
+// Max-width 992px
+@media (max-width: $md2+px) {
+  .addToCartFull {
+    width: 100%;
+  }
+}
+
+// Max-width 480px
+@media (max-width: $md4+px) {
+  .addToCartFull {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 105px;
+    align-items: center;
+  }
+
+  .priceFull {
+    font-size: 20px;
+  }
+}
